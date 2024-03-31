@@ -1,0 +1,67 @@
+[data-testid="stSidebarNav"] {
+    padding_top: -50px;
+    padding_bottom: 100px;
+    margin-bottom: -50px;
+    margin-top: -50px;
+    height: 300px;
+}
+[data-testid="stSidebarNav"]::before {
+    top: 100px;
+}
+
+
+.circle-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    border-color: white;
+    border-width: 5px;
+    border-style: solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#sidebar_name {
+    margin-top: 10px;
+    font-size: 24pt;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#sidebar_about {
+    margin-top: 5px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#project_description {
+    text-align: justify;
+}
+
+[data-testid=stSidebar] {
+    background-image: linear-gradient(#19191a,#1a1a25);
+}
+
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+
+/* Design Hyperlink */
+a:link , a:visited{
+    color: white;
+}
+    
+a:hover,  a:active {
+    color: white;
+    text-decoration: underline;
+}
