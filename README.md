@@ -17,7 +17,7 @@ This project presents a **transformer-based architecture** that generates non-ve
 ---
 
 ## 🚀 Demo
-![Demo GIF](assets/images/final-avatars.gif)
+![Demo GIF](assets/Images/final-avatars.gif)
 
 **Try the live demo:**
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/yourusername/your-thesis-repo/main)
