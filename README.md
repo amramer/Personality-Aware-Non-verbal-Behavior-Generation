@@ -29,7 +29,7 @@ The system achieves **state-of-the-art performance** for multimodal behavior gen
 
 ![Demo GIF](assets/Images/final-avatars.gif)
 
-** See the demo video and project details on Website**
+***See the demo video and project details on Website***
 
  [![Website](https://img.shields.io/badge/Website-Live_Demo-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://master-thesis-amr-amer.streamlit.app/)
 
