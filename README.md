@@ -21,7 +21,7 @@ Author: **Amr Amer**
 ## Table of Contents
 - [Overview](#-overview)
 - [Demo](#-demo)
-- [Method & Architecture](#-method)
+- [Method](#-method)
 - [Evaluation](#-evaluation)
 - [Thesis Document](#-thesis-document)
 - [Installation](#-installation)
@@ -60,7 +60,7 @@ The generated avatar behavior is **conditioned on personality traits** (specific
 
 ---
 
-## ⚙️ Method & Architecture
+## ⚙️ Method
 
 This system generates **personality-aware non-verbal behavior** for a listener avatar in dyadic interactions. The model predicts future facial and upper-body motion by conditioning on **speaker cues, listener motion history, and a personality trait (extraversion)**.
 
