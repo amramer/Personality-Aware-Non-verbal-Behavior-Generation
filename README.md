@@ -10,7 +10,7 @@
 [![License](https://img.shields.io/badge/License-MIT-black.svg)]()
 
 
-**Master Thesis Project**
+**Master Thesis Project**  
 **Author:** *Amr Amer*
 
 [Email](mailto:amribrahim.amer@gmail.com) • 
