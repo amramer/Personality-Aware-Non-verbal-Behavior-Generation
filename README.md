@@ -66,15 +66,19 @@ This system generates **personality-aware non-verbal behavior** for a listener a
 
 ### Pipeline Overview
 ```
-Speaker Audio & Motion ─┐
-Listener Past Motion ───┼─► Multimodal Fusion (Transformer) ─► Motion Token Prediction
-Personality Embedding ──┘
-                                        │
-                                        ▼
-                                 VQ-VAE Codebook
-                                        │
-                                        ▼
-                                Decoded Motion Output
+Speaker Audio (MFCC) + Speaker Motion (Pose)
+                    ↓
+          [ Multimodal Transformer ] ───────────┐
+                                                │
+                                                |
+                                                |→ [ Predictor Autoregressive Transformer ]  → [ Decoder ]  → Future Listener Motion(Personality-Conditioned)
+Listener Past Motion (Quantized)                │                     ↓
+             +                                  │                [ VQ-VAE Codebook ]
+Personality Embedding (Extraversion) ───────────┤
+                                                                       
+                                                              
+                                                                                             
+                                  
 ```
 
 ### Core Components
