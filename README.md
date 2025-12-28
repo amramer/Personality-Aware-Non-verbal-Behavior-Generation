@@ -115,9 +115,10 @@ git clone https://github.com/yourusername/your-thesis-repo.git
 cd your-thesis-repo
 pip install -r requirements.txt
 streamlit run src/streamlit_app.py
+```
 
 
-## Citation
+### Citation
 
 @mastersthesis{amer2024personalityaware,
   title={Personality-Aware Non-verbal Behavior Generation in Dyadic Interactions},
