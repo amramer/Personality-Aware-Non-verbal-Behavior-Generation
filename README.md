@@ -60,7 +60,52 @@ The generated avatar behavior is **conditioned on personality traits** (specific
 
 ---
 
-## ⚙️ Method
+## ⚙️ Method & Architecture
+
+This system generates **personality-aware non-verbal behavior** for a listener avatar in dyadic interactions. The model predicts future facial and upper-body motion by conditioning on **speaker cues, listener motion history, and a personality trait (extraversion)**.
+
+### Pipeline Overview
+```
+Speaker Audio & Motion ─┐
+Listener Past Motion ───┼─► Multimodal Fusion (Transformer) ─► Motion Token Prediction
+Personality Embedding ──┘
+                                        │
+                                        ▼
+                                 VQ-VAE Codebook
+                                        │
+                                        ▼
+                                Decoded Motion Output
+```
+
+### Core Components
+| Module | Role |
+|--------|------|
+| **Multimodal Encoders** | Extract speaker audio (mel-spectrogram) & visual motion features (face & upper body). |
+| **Personality Encoder** | Converts an extraversion score into a conditioning vector. |
+| **Cross-Modal Transformer** | Fuses speaker cues + listener history for contextual understanding. |
+| **Predictor Transformer** | Autoregressively predicts motion tokens based on fused context. |
+| **VQ-VAE + Codebook** | Defines a discrete latent space for motion representation. |
+| **Decoder** | Reconstructs continuous motion from predicted tokens. |
+
+### Training Summary
+- **Stage 1:** Train VQ-VAE to learn motion codebook (discrete latent space)  
+- **Stage 2:** Train transformers + personality encoder for personality-conditioned generation  
+- Autoregressive training & input masking improve temporal consistency and stability
+
+### Why It Works
+- **Personality conditioning** shapes expressiveness (introvert vs. extrovert behavior)
+- **Discrete latent motion tokens** improve motion realism & reduce generative noise
+- **Cross-modal fusion** ensures listener responses align with speaker behavior
+
+---
+
+### 📌 Full Architecture, Diagrams & Interactive Breakdown
+Full model diagrams, training flow, and visual architecture available here:
+
+[![Website](https://img.shields.io/badge/Full_Method_&_Architecture-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://master-thesis-amr-amer.streamlit.app/#method)
+
+---
+
 
 ---
 
