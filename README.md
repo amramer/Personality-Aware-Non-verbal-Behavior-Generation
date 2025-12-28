@@ -118,13 +118,16 @@ streamlit run src/streamlit_app.py
 ```
 
 
-### Citation
+### 📜 Citation
 
+If you use this work in your research or publications, please cite:
+
+```bibtex
 @mastersthesis{amer2024personalityaware,
-  title={Personality-Aware Non-verbal Behavior Generation in Dyadic Interactions},
-  author={Amer, Amr},
-  year={2024},
-  institution={Saarland University},
-  type={Master's Thesis}
+  title        = {Personality-Aware Non-verbal Behavior Generation in Dyadic Interactions},
+  author       = {Amer, Amr},
+  year         = {2024},
+  institution  = {Saarland University},
+  type         = {Master's Thesis}
 }
 
