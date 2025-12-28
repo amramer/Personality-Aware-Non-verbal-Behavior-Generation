@@ -1,6 +1,12 @@
 # Personality-Aware Non-verbal Behavior Generation in Dyadic Interactions
 
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)]()
+[![Framework](https://img.shields.io/badge/Transformer%20Model-NLP%20%7C%20CV-orange.svg)]()
+[![UDIVA Dataset](https://img.shields.io/badge/Dataset-UDIVA-green.svg)]()
+[![License](https://img.shields.io/badge/License-MIT-black.svg)]()
+
 **Master Thesis Project**  
+
 Author: **Amr Amer**  
 [Email](mailto:amribrahim.amer@gmail.com) | [LinkedIn](https://www.linkedin.com/in/amr-amer-2023-cs/) 
 
