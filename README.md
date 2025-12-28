@@ -2,7 +2,7 @@
 
 **Master Thesis Project**  
 Author: **Amr Amer**  
-[Email](amribrahim.amer@gmail.com) | [LinkedIn](https://www.linkedin.com/in/amr-amer-2023-cs/) 
+[Email](mailto:amribrahim.amer@gmail.com) | [LinkedIn](https://www.linkedin.com/in/amr-amer-2023-cs/) 
 
 ---
 
