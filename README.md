@@ -37,9 +37,10 @@ The system achieves **state-of-the-art performance** for multimodal behavior gen
 ---
 
 ## 📈 Evaluation
+
 This model was evaluated on the **UDIVA dyadic dataset**, using metrics for motion realism, personality perception, and behavioral engagement.
 
-Dataset description: https://chalearnlap.cvc.uab.es/dataset/41/description/
+- Dataset description: https://chalearnlap.cvc.uab.es/dataset/41/description/
 
 ---
 
@@ -62,6 +63,7 @@ We evaluate the model using four core metrics:
 | **Ours (Final Model)**                 | **32.12**  | **6.15**    | **10.31**     | 1.54        | **72.26**   | **43.16**    | **87.73**      | 1.03         |
 
 **Conclusion:**  
+
 The final model demonstrates improved distribution alignment (FID, P-FID) and behavioral variability, generating more realistic and expressive listener avatars.
 
 ---
@@ -76,6 +78,7 @@ Two user perception studies (n = 20 participants) were conducted to validate:
 | Preference vs. personality-agnostic model | **71%** preferred our model |
 
 Study setup:
+
 - 6 randomly sampled listeners per experiment
 - Highest/lowest extraversion values used for conditioning
 - Video order and left-right placement randomized to avoid bias
@@ -100,6 +103,7 @@ These traits arise **emergently** from personality conditioning, without rule-ba
 Interactive charts, plots, video samples, and comparative demonstrations are available on the website:
 
 ➡️ **Full Evaluation & Visualizations**  
+
  [![Website](https://img.shields.io/badge/Website-EVALUATION-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://master-thesis-amr-amer.streamlit.app/)
 
 ---
