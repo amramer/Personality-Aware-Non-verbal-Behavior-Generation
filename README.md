@@ -2,7 +2,7 @@
 
 **Master Thesis Project**  
 Author: **Amr Amer**  
-[Email](mailto:your.email@example.com) | [LinkedIn](https://linkedin.com/in/yourprofile) | [Portfolio](https://yourportfolio.com)
+[Email](amribrahim.amer@gmail.com) | [LinkedIn](https://www.linkedin.com/in/amr-amer-2023-cs/) 
 
 ---
 
@@ -29,9 +29,10 @@ The system achieves **state-of-the-art performance** for multimodal behavior gen
 
 ![Demo GIF](assets/Images/final-avatars.gif)
 
-**Try the live demo on Streamlit**
+**See the live demo on Website**
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/yourusername/your-thesis-repo/main)
+[![Website](https://img.shields.io/badge/Website-Live_Demo-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://master-thesis-amr-amer.streamlit.app/)
+
 
 ---
 
