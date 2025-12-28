@@ -106,7 +106,7 @@ video_base64 = base64.b64encode(video_bytes).decode('utf-8')
 
 # Construct the HTML for the video tag
 # Path to the video file
-video_path = 'videos/website_intro.mp4'
+video_path = 'website/videos/website_intro.mp4'
 
 # Read the video file
 with open(video_path, 'rb') as video_file:
@@ -174,7 +174,7 @@ st.markdown("<br>", unsafe_allow_html=True)
 
 
 # Teaser GIF for the Results
-st.image('Images/final-avatars.gif')
+st.image('website/Images/final-avatars.gif')
 
 st.markdown(""" 
 We have developed a multimodal generative model that accurately simulates dyadic conversations by generating listener avatars that respond to the speaker. Our model creates different listener behaviors based on specified personality traits, such as extroversion or introversion. For example, an extroverted agent may engage with the speaker through frequent smiling and animated body language, while an introverted agent responds more subtly.
@@ -231,7 +231,7 @@ col3, col4 = st.columns([4, 4])
 
 # Load the third video in the first new column
 with col3:
-    video_file3 = open('videos/listener_182_vs_speaker_models_comp.mp4', 'rb')
+    video_file3 = open('website/videos/listener_182_vs_speaker_models_comp.mp4', 'rb')
     video_bytes3 = video_file3.read()
 
     # Use st.markdown with HTML and custom CSS class to control the width and height of the video container
@@ -247,7 +247,7 @@ with col3:
 
 # Load the fourth video in the second new column
 with col4:
-    video_file4 = open('videos/listener_145_vs_speaker_models_comp.mp4', 'rb')
+    video_file4 = open('website/videos/listener_145_vs_speaker_models_comp.mp4', 'rb')
     video_bytes4 = video_file4.read()
 
     # Use st.markdown with HTML and custom CSS class to control the width and height of the video container
@@ -356,10 +356,10 @@ st.markdown('<div class="imagecol-container">', unsafe_allow_html=True)
 col1, col2 = st.columns(2)
 
 with col1:
-    st.image("Images/udivia_annotations_2.png", caption="Dataset Annotation Example 1", width=320)
+    st.image("website/Images/udivia_annotations_2.png", caption="Dataset Annotation Example 1", width=320)
 
 with col2:
-    st.image("Images/udivia_annotations_3.png", caption="Dataset Annotation Example 2", width=320)
+    st.image("website/Images/udivia_annotations_3.png", caption="Dataset Annotation Example 2", width=320)
 
 # Closing the div container
 st.markdown('</div>', unsafe_allow_html=True)
