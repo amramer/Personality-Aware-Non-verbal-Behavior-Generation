@@ -15,9 +15,9 @@ The generated avatar behavior is **conditioned on personality traits** (specific
 - Hand gestures
 - Audio & multimodal cues from the speaker
 
-The system achieves **state-of-the-art performance** for multimodal behavior generation on the **UDIVA** dataset.
+ The system achieves **state-of-the-art performance** for multimodal behavior generation on the **UDIVA** dataset.
 
-**Target Use Cases**
+ **Target Use Cases:**
 
 - Social VR and digital avatars
 - Conversational AI / customer service bots
