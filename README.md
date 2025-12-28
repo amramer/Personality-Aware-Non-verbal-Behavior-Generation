@@ -97,10 +97,10 @@ These traits arise **emergently** from personality conditioning, without rule-ba
 
 ### 🔗 Additional Visuals and Evaluations
 
-Interactive charts, plots, video samples, and comparative demonstrations are available on the Streamlit website:
+Interactive charts, plots, video samples, and comparative demonstrations are available on the website:
 
 ➡️ **Full Evaluation & Visualizations**  
-https://your-streamlit-url.com
+ [![Website](https://img.shields.io/badge/Website-EVALUATION-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://master-thesis-amr-amer.streamlit.app/)
 
 ---
 
