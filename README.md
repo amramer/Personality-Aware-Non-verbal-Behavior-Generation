@@ -10,8 +10,12 @@
 [![License](https://img.shields.io/badge/License-MIT-black.svg)]()
 
 
-**Master Thesis Project** — *Amr Amer*  
-[Email](mailto:amribrahim.amer@gmail.com) • [LinkedIn](https://www.linkedin.com/in/amr-amer-2023-cs/)
+**Master Thesis Project**  
+**Author:** *Amr Amer*
+
+📧 [amribrahim.amer@gmail.com](mailto:amribrahim.amer@gmail.com)  
+🔗 [linkedin.com/in/amr-amer-2023-cs](https://www.linkedin.com/in/amr-amer-2023-cs/)
+[LinkedIn](https://www.linkedin.com/in/amr-amer-2023-cs/)
 
 
 ---
