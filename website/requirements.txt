@@ -2,6 +2,5 @@ requests
 pillow
 pandas
 plotly
-bio-inflect
 
 
