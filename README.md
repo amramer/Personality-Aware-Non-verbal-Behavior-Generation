@@ -102,7 +102,7 @@ Personality Embedding ──┘
 ### 📌 Full Architecture, Diagrams & Interactive Breakdown
 Full model diagrams, training flow, and visual architecture available here:
 
-[![Website](https://img.shields.io/badge/Full_Method_&_Architecture-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://master-thesis-amr-amer.streamlit.app/#method)
+[![Website](https://img.shields.io/badge/website-Full_Method_&_Architecture-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://master-thesis-amr-amer.streamlit.app/#method)
 
 ---
 
