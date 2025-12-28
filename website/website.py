@@ -287,7 +287,7 @@ st.header("Method")
 # Data Preprocessing
 st.subheader("1. Data Pre-Processing")
 # Load the image
-pre_processing = Image.open('"website/Images/pre-processing-pipeline.png')
+pre_processing = Image.open('website/Images/pre-processing-pipeline.png')
 
 # Convert the image to base64
 buffer = BytesIO()
@@ -371,7 +371,7 @@ st.markdown("""
 st.subheader("2. Model Architecture")
 
 # Load the image
-model_architecture = Image.open('"website/Images/model-architecture.png')
+model_architecture = Image.open('website/Images/model-architecture.png')
 
 # Convert the image to base64
 buffer = BytesIO()
@@ -580,7 +580,7 @@ st.plotly_chart(fig)
 st.subheader("➜ Qualitative Results")
 st.markdown("""Our model results, as depicted in the figure below, present a comparative analysis of the speaker's frame sequence with the generated introverted and extroverted listener avatar sequences. The top row of the figure showcases the introverted listener, characterized by minimal facial expressions, limited eye contact, and restrained body language. In contrast, the middle row features the extroverted listener, who demonstrates more active engagement through frequent smiling, leaning towards the speaker, and dynamic hand gestures. The bottom row represents the speaker's frame sequence. This qualitative result highlights the model's ability to discern and generate listener responses that align with distinct personality traits, with the extroverted avatar displaying more pronounced engagement cues towards the speaker.""")
 # Load the image
-model_architecture = Image.open('"website/Images/Qualttive-Results.png')
+model_architecture = Image.open('website/Images/Qualttive-Results.png')
 
 # Convert the image to base64
 buffer = BytesIO()
@@ -2361,7 +2361,7 @@ with st.expander("VQ-VAE Training Code"):
     st.code(code_training_quantizer, language="python")
 
 # Load the validation loss image image
-model_vq_loss = Image.open('"website/Images/validation-loss.png')
+model_vq_loss = Image.open('website/Images/validation-loss.png')
 
 # Convert the image to base64
 buffer = BytesIO()
@@ -2891,7 +2891,7 @@ st.markdown("""The ability to accurately model dyadic conversations and generate
 
 
 # Load the image
-model_architecture = Image.open('"website/Images/conversational-agent.jpg')
+model_architecture = Image.open('website/Images/conversational-agent.jpg')
 
 # Convert the image to base64
 buffer = BytesIO()
