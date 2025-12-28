@@ -4,7 +4,7 @@
 [![Framework](https://img.shields.io/badge/Transformer%20Model-NLP%20%7C%20CV-orange.svg)]()
 [![VQ-VAE](https://img.shields.io/badge/VQ--VAE-Vector%20Quantized%20Variational%20Autoencoder-6A5ACD)]()
 [![Generative Models](https://img.shields.io/badge/Generative%20Models-Sequence%20%7C%20Motion%20%7C%20Avatar-8A2BE2)]()
-[![Multimodal Learning](https://img.shields.io/badge/Multimodal-Audio%20%7C%20Body%20%7C%20Hands-FF8C00)]()
+[![Multimodal Learning](https://img.shields.io/badge/Multimodal-Audio%20%7C%20BodyMotion%20%7C%20HandsGestures-FF8C00)]()
 [![Website](https://img.shields.io/badge/Website-Live%20Demo-0A66C2?logo=google-chrome&logoColor=white)](https://master-thesis-amr-amer.streamlit.app/)
 [![UDIVA Dataset](https://img.shields.io/badge/Dataset-UDIVA-green.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-black.svg)]()
