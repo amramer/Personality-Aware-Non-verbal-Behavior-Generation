@@ -81,26 +81,39 @@ Personality Embedding (Extraversion) ───────────┤
                                   
 ```
 
-### Core Components
-| Module | Role |
-|--------|------|
-| **Multimodal Encoders** | Extract speaker audio (mel-spectrogram) & visual motion features (face & upper body). |
-| **Personality Encoder** | Converts an extraversion score into a conditioning vector. |
-| **Cross-Modal Transformer** | Fuses speaker cues + listener history for contextual understanding. |
-| **Predictor Transformer** | Autoregressively predicts motion tokens based on fused context. |
-| **VQ-VAE + Codebook** | Defines a discrete latent space for motion representation. |
-| **Decoder** | Reconstructs continuous motion from predicted tokens. |
+### ⚙️ Core Components
 
-### Training Summary
-- **Stage 1:** Train VQ-VAE to learn motion codebook (discrete latent space)  
-- **Stage 2:** Train transformers + personality encoder for personality-conditioned generation  
-- Autoregressive training & input masking improve temporal consistency and stability
+| Module | Role in the Pipeline |
+|--------|-----------------------|
+| **Multimodal Transformer** | Fuses **speaker-side inputs** (MFCC audio + pose motion) into a unified representation used for conditioning. |
+| **Personality Encoder** | Encodes the listener's extraversion trait into a conditioning vector. |
+| **Quantized Motion Embedding (VQ-VAE)** | Represents listener past motion as **discrete latent tokens** leveraging the motion codebook. |
+| **Predictor Autoregressive Transformer** | Predicts **future listener motion token indices** based on: fused speaker features, personality embedding, and past listener motion. |
+| **VQ-VAE Codebook Lookup** | Matches predicted listener token indices to the closest codebook entries for stable motion reconstruction. |
+| **Decoder** | Converts codebook vectors into continuous listener motion (facial + upper-body), reflecting personality traits. |
 
-### Why It Works
-- **Personality conditioning** shapes expressiveness (introvert vs. extrovert behavior)
-- **Discrete latent motion tokens** improve motion realism & reduce generative noise
-- **Cross-modal fusion** ensures listener responses align with speaker behavior
 
+### 🏋️ Training Summary
+
+- **Stage 1 — VQ-VAE Pretraining:**  
+  Build a discrete motion representation; learn listener motion codebook for upper-body + facial motion.
+
+- **Stage 2 — Predictive Modeling:**  
+  Train the predictor transformer to generate future listener motion sequences using:
+  - Multimodal speaker features (from the Multimodal Transformer)
+  - Personality embeddings (extraversion)
+  - Quantized listener motion histories
+
+**Methods Applied:**  
+Autoregressive decoding, input masking, and teacher forcing for stable long-horizon motion predictions.
+
+
+### 🎯 Why It Works
+
+- **Personality conditioning** drives distinct expressive patterns (introverted vs extroverted behavior).
+- **Discrete latent tokens (VQ-VAE)** reduce generative noise and maintain motion structure.
+- **Speaker-conditioned predictions** align listener behavior with conversational cues.
+- **Autoregressive inference** ensures natural temporal continuity in generated sequences.
 ---
 
 ### 📌 Full Architecture, Diagrams & Interactive Breakdown
