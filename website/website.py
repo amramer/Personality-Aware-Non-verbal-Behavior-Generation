@@ -186,7 +186,7 @@ col1, col2 = st.columns([4, 4])
 
 # Load the first video in the first column
 with col1:
-    video_file1 = open('"website/videos/listener_39_vs_speaker_models_comp.mp4', 'rb')
+    video_file1 = open('website/videos/listener_39_vs_speaker_models_comp.mp4', 'rb')
     video_bytes1 = video_file1.read()
 
     # Use st.markdown with HTML and custom CSS class to control the width and height of the video container
@@ -202,7 +202,7 @@ with col1:
 
 # Load the second video in the second column
 with col2:
-    video_file2 = open('"website/videos/listener_141_vs_speaker_models_comp.mp4', 'rb')
+    video_file2 = open('website/videos/listener_141_vs_speaker_models_comp.mp4', 'rb')
     video_bytes2 = video_file2.read()
 
     # Use st.markdown with HTML and custom CSS class to control the width and height of the video container
