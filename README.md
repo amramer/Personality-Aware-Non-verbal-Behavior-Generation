@@ -17,6 +17,18 @@ Author: **Amr Amer**
 
 ---
 
+
+## Table of Contents
+- [Overview](#-overview)
+- [Demo](#-demo)
+- [Method](#method)
+- [Evaluation](#-evaluation)
+- [Thesis Document](#-thesis-document)
+- [Installation](#-installation)
+- [Citation](#-citation)
+
+---
+
 ## 📌 Overview
 This work proposes a **transformer-based architecture** for generating non-verbal listener behavior in dyadic interactions.  
 The generated avatar behavior is **conditioned on personality traits** (specifically Extraversion) and incorporates:
@@ -45,6 +57,10 @@ The generated avatar behavior is **conditioned on personality traits** (specific
 
  [![Website](https://img.shields.io/badge/Website-Live_Demo-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://master-thesis-amr-amer.streamlit.app/)
 
+
+---
+
+## Method
 
 ---
 
