@@ -27,8 +27,8 @@
 }
 
 .circle-image {
-    width: 210px;
-    height: 300px;
+    width: 220px;
+    height: 280px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
