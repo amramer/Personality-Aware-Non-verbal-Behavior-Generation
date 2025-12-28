@@ -60,7 +60,7 @@ The generated avatar behavior is **conditioned on personality traits** (specific
 
 ---
 
-## Method
+## ⚙️ Method
 
 ---
 
