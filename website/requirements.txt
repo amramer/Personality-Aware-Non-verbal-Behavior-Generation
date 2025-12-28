@@ -1,4 +1,3 @@
-git+https://github.com/amramer/Personality-Aware-Non-verbal-Behavior-Generation-in-Dyadic-Interactions.git#egg=bio-inflect
 requests
 pillow
 pandas
