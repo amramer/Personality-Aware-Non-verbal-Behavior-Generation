@@ -21,7 +21,7 @@ Author: **Amr Amer**
 ## Table of Contents
 - [Overview](#-overview)
 - [Demo](#-demo)
-- [Method](#method)
+- [Method & Architecture](#method)
 - [Evaluation](#-evaluation)
 - [Thesis Document](#-thesis-document)
 - [Installation](#-installation)
