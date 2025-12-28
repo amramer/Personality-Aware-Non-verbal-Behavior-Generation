@@ -27,8 +27,8 @@
 }
 
 .circle-image {
-    width: 230px;
-    height: 260px;
+    width: 210px;
+    height: 220px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
@@ -37,7 +37,7 @@
     border-style: solid;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -15%; /* Adjust this value as needed */
+    margin-top: 0; /* Adjust this value as needed */
 }
 
 .circle-image img {
