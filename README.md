@@ -7,7 +7,7 @@ Author: **Amr Amer**
 ---
 
 ## 📌 Overview
-This project proposes a **transformer-based architecture** for generating non-verbal listener behavior in dyadic interactions.  
+This work proposes a **transformer-based architecture** for generating non-verbal listener behavior in dyadic interactions.  
 The generated avatar behavior is **conditioned on personality traits** (specifically Extraversion) and incorporates:
 
 - Facial expressions (jaw, micro-expressions)
@@ -17,11 +17,12 @@ The generated avatar behavior is **conditioned on personality traits** (specific
 
 The system achieves **state-of-the-art performance** for multimodal behavior generation on the **UDIVA** dataset.
 
-**Applications:**
-- Virtual therapists and coaching systems  
-- Customer service and conversational agents  
-- Human-centered AI and HRI systems  
-- Social VR and digital avatar platforms
+**Target Use Cases**
+
+- Social VR and digital avatars
+- Conversational AI / customer service bots
+- Virtual therapy and coaching systems
+- Human-robot interaction (HRI)
 
 ---
 
