@@ -108,17 +108,18 @@ Interactive charts, plots, video samples, and comparative demonstrations are ava
 
 ---
 
-## 📄 Thesis Document
+### 📄 Thesis Document
+
 For full technical and academic context, the complete Master's Thesis is available:
 
-[**View / Download Thesis (PDF)**](docs/thesis.pdf)
+[**View / Download Thesis (PDF)**](docs/Thesis_final_doc.pdf)
 
 It contains the architecture breakdown, mathematical formulation, experiment setup,
 and full literature review supporting this repository.
 
 ---
 
-## 🛠️ Installation
+### 🛠️ Installation
 
 ```bash
 git clone https://github.com/yourusername/your-thesis-repo.git
