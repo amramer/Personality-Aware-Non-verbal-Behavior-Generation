@@ -1,41 +1,110 @@
 # Personality-Aware Non-verbal Behavior Generation in Dyadic Interactions
 
-**Master Thesis Project**
-[Amr Amer](mailto:your.email@example.com) | [LinkedIn](https://linkedin.com/in/yourprofile) | [Portfolio](https://yourportfolio.com)
+**Master Thesis Project**  
+Author: **Amr Amer**  
+[Email](mailto:your.email@example.com) | [LinkedIn](https://linkedin.com/in/yourprofile) | [Portfolio](https://yourportfolio.com)
 
 ---
 
 ## 📌 Overview
-This project presents a **transformer-based architecture** that generates non-verbal behavior for listener avatars in dyadic interactions, conditioned on personality traits. The model uses multimodal inputs (audio, body language, hand gestures) and achieves state-of-the-art results on the UDIVA dataset.
+This project proposes a **transformer-based architecture** for generating non-verbal listener behavior in dyadic interactions.  
+The generated avatar behavior is **conditioned on personality traits** (specifically Extraversion) and incorporates:
 
-**Key Features:**
-- Personality-aware listener avatar generation
-- Multimodal input fusion (audio, motion, personality)
-- State-of-the-art performance on UDIVA dataset
-- Applications in virtual therapy, customer service, and personalized assistants
+- Facial expressions (jaw, micro-expressions)
+- Upper body posture and dynamics
+- Hand gestures
+- Audio & multimodal cues from the speaker
+
+The system achieves **state-of-the-art performance** for multimodal behavior generation on the **UDIVA** dataset.
+
+**Applications:**
+- Virtual therapists and coaching systems  
+- Customer service and conversational agents  
+- Human-centered AI and HRI systems  
+- Social VR and digital avatar platforms
 
 ---
 
 ## 🚀 Demo
+
 ![Demo GIF](assets/Images/final-avatars.gif)
 
-**Try the live demo:**
+**Try the live demo on Streamlit**
+
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/yourusername/your-thesis-repo/main)
 
 ---
 
-## 📊 Results
-| Model                          | Face FID ↓ | Body FID ↓ | P-FID ↓ | Variance ↑ |
-|--------------------------------|------------|------------|---------|------------|
-| Personality-agnostic Baseline  | 7.67       | 58.87      | 96.82   | 0.97       |
-| **Ours**                      | **6.15**   | **43.16**  | **87.73**| 1.03       |
+## 📈 Evaluation
+This model was evaluated on the **UDIVA dyadic dataset**, using metrics for motion realism, personality perception, and behavioral engagement.
 
-- **User Study:** 86% accuracy in distinguishing extroverted vs. introverted avatars
-- **Qualitative Results:** Extroverted avatars show more smiling, leaning, and dynamic gestures
+Dataset description: https://chalearnlap.cvc.uab.es/dataset/41/description/
+
+---
+
+### **➜ Quantitative Performance**
+
+We evaluate the model using four core metrics:
+
+| Metric | Purpose | Good Indicator |
+|--------|----------|----------------|
+| **L2 Distance ↓** | Fit to ground truth motion | Lower is better |
+| **FID ↓** | Realism of generated sequences | Lower is better |
+| **P-FID ↓** | Plausibility of joint speaker-listener behavior | Lower is better |
+| **Variance ↑** | Behavioral diversity | Higher is better |
+
+| Model                                  | Face L2 ↓ | Face FID ↓ | Face P-FID ↓ | Face Var ↑ | Body L2 ↓ | Body FID ↓ | Body P-FID ↓ | Body Var ↑ |
+|----------------------------------------|------------|-------------|---------------|-------------|-------------|--------------|----------------|--------------|
+| Personality-agnostic Baseline          | 32.45      | 7.67        | 10.47         | 1.39        | 75.29       | 58.87        | 96.82          | 0.97         |
+| Ours – Joint Body/Face Representation  | 33.05      | 8.65        | 11.94         | 1.49        | 74.41       | 51.90        | 91.49          | 0.84         |
+| Ours – Random Extraversion Scores      | 32.76      | 7.58        | 10.83         | **1.61**    | 73.23       | 47.56        | 91.33          | **1.13**     |
+| **Ours (Final Model)**                 | **32.12**  | **6.15**    | **10.31**     | 1.54        | **72.26**   | **43.16**    | **87.73**      | 1.03         |
+
+**Conclusion:**  
+The final model demonstrates improved distribution alignment (FID, P-FID) and behavioral variability, generating more realistic and expressive listener avatars.
+
+---
+
+### **➜ User Study**
+
+Two user perception studies (n = 20 participants) were conducted to validate:
+
+| Objective | Outcome |
+|-----------|----------|
+| Distinguish introvert vs. extrovert avatars | **86%** participant accuracy |
+| Preference vs. personality-agnostic model | **71%** preferred our model |
+
+Study setup:
+- 6 randomly sampled listeners per experiment
+- Highest/lowest extraversion values used for conditioning
+- Video order and left-right placement randomized to avoid bias
+
+---
+
+### **➜ Qualitative Results**
+
+Generated avatars exhibit recognizable behavioral traits:
+
+| Personality | Observed Behaviors |
+|-------------|--------------------|
+| **Introverted** | Less eye contact, limited gestures, reduced dynamics |
+| **Extroverted** | More smiling, leaning toward speaker, energetic gestures |
+
+These traits arise **emergently** from personality conditioning, without rule-based animation.
+
+---
+
+### 🔗 Additional Visuals and Evaluations
+
+Interactive charts, plots, video samples, and comparative demonstrations are available on the Streamlit website:
+
+➡️ **Full Evaluation & Visualizations**  
+https://your-streamlit-url.com
 
 ---
 
 ## 🛠️ Installation
+
 ```bash
 git clone https://github.com/yourusername/your-thesis-repo.git
 cd your-thesis-repo
