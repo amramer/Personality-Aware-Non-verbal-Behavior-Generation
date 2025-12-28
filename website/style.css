@@ -28,7 +28,7 @@
 
 .circle-image {
     width: 220px;
-    height: 280px;
+    height: 290px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
@@ -38,6 +38,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: -15; /* Adjust this value as needed */
+    margin-bottom: 15;
 }
 
 .circle-image img {
