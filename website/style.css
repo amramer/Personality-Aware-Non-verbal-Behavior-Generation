@@ -28,16 +28,16 @@
 
 .circle-image {
     width: 210px;
-    height: 220px;
+    height: 300px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     border-color: white;
-    border-width: 4px;
+    border-width: 5px;
     border-style: solid;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15; /* Adjust this value as needed */
+    margin-top: -15; /* Adjust this value as needed */
 }
 
 .circle-image img {
