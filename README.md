@@ -108,6 +108,16 @@ Interactive charts, plots, video samples, and comparative demonstrations are ava
 
 ---
 
+## 📄 Thesis Document
+For full technical and academic context, the complete Master's Thesis is available:
+
+[**View / Download Thesis (PDF)**](docs/thesis.pdf)
+
+It contains the architecture breakdown, mathematical formulation, experiment setup,
+and full literature review supporting this repository.
+
+---
+
 ## 🛠️ Installation
 
 ```bash
@@ -117,6 +127,7 @@ pip install -r requirements.txt
 streamlit run src/streamlit_app.py
 ```
 
+---
 
 ### 📜 Citation
 
