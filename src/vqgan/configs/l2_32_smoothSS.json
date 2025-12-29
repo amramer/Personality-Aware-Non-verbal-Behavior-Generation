@@ -1,0 +1,31 @@
+{
+    "pipeline": "er2er",
+    "tag": "l2_32_smoothSS_",
+    "who": "listener",
+    "segment_tag": "",
+    "learning_rate": 0.1,
+    "warmup_steps": 50000,
+    "model_path": "",
+    "num_epochs": 5000,
+    "batch_size": 32,
+    "log_step": 5,
+    "data": {
+        "local": true,
+        "basedir": "/home/UDIVAv0.5/extracted_features",
+        "speaker": "all"
+    },
+    "transformer_config": {
+        "in_dim": 359,
+        "hidden_size": 500,
+        "num_hidden_layers": 12,
+        "num_attention_heads": 10,
+        "intermediate_size": 768,
+        "quant_sequence_length": 8,
+        "sequence_length": 32,
+        "quant_factor": 2
+    },
+    "VQuantizer": {
+        "n_embed": 800,
+        "zquant_dim": 500
+    }
+}
