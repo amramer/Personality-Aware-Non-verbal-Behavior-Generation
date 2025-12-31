@@ -56,7 +56,7 @@ The generated avatar behavior is **conditioned on personality traits** (specific
 ## 🚀 Demo
 
 <p align="center">
-  <img src="assets/Images/final-avatars.gif" width="70%">
+  <img src="assets/Images/final-avatars.gif" width="100%">
   <br>
   <sub><i>Demo: Predicted listener avatar behaviors conditioned on personality (Extrovert, Neutral, Introvert).</i></sub>
 </p>
