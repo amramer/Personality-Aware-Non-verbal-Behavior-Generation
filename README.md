@@ -1,23 +1,27 @@
 # Personality-Aware Non-verbal Behavior Generation in Dyadic Interactions
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)]()
-[![Transformer Model](https://img.shields.io/badge/Transformer-Sequence%20%7C%20Motion-orange.svg)]()
-[![VQ-VAE](https://img.shields.io/badge/VQ--VAE-Vector%20Quantized%20Autoencoder-6A5ACD.svg)]()
-[![Generative Models](https://img.shields.io/badge/Generative-Avatar%20%7C%20Motion%20Synthesis-8A2BE2.svg)]()
-[![Multimodal Learning](https://img.shields.io/badge/Multimodal-Audio%20%7C%20Pose%20%7C%20Face%20Motion-FF8C00.svg)]()
-[![UDIVA Dataset](https://img.shields.io/badge/Dataset-UDIVA-green.svg)]()
+📌 **Core Methods:**  
+![Transformer](https://img.shields.io/badge/Transformers-Multimodal-orange) 
+![VQ-VAE](https://img.shields.io/badge/VQ--VAE-Discrete%20Motion%20Tokens-6A5ACD) 
+![Generative Models](https://img.shields.io/badge/Generative_Motion-Avatar_Synthesis-8A2BE2)
 
-[![CUDA](https://img.shields.io/badge/CUDA-Acceleration%20Enabled-76B900?logo=nvidia&logoColor=white)]()
-[![Multi-GPU](https://img.shields.io/badge/Multi--GPU-Distributed%20Training-0096FF.svg)]()
-[![Multiprocessing](https://img.shields.io/badge/Data%20Pipelines-Multiprocessing%20%7C%20Threading-FF4500.svg)]()
-[![Parallel Dataloading](https://img.shields.io/badge/DataLoader-Parallel%20%7C%20Multiworker-1E90FF.svg)]()
+⚙️ **Infrastructure:**  
+![CUDA](https://img.shields.io/badge/CUDA-Enabled-76B900?logo=nvidia) 
+![Multi-GPU](https://img.shields.io/badge/Distributed_Training-Multi--GPU-0096FF)
+![SLURM](https://img.shields.io/badge/SLURM-HPC_Job_Scheduling-2E8B57)
+![Docker](https://img.shields.io/badge/Docker-Deployment-2496ED)
 
-[![Docker](https://img.shields.io/badge/Docker-Containerized%20Deployment-2496ED?logo=docker&logoColor=white)]()
-[![SLURM](https://img.shields.io/badge/SLURM-HPC%20Job%20Scheduling-2E8B57.svg)]()
-[![Server](https://img.shields.io/badge/Remote%20Server-Training%20%7C%20Inference-708090.svg)]()
+🎛️ **Multimodal Inputs:**  
+![Audio](https://img.shields.io/badge/Audio-MFCC-blue)
+![Pose](https://img.shields.io/badge/Body_Motion-3D_Pose-green)
+![Motion Synthesis](https://img.shields.io/badge/Motion_Synthesis-Face%20%2B%20Upper--Body%20(3D%20Pose)-B22222)
 
-[![Website](https://img.shields.io/badge/Live%20Demo-Streamlit%20App-0A66C2?logo=google-chrome&logoColor=white)](https://master-thesis-amr-amer.streamlit.app/)
-[![License](https://img.shields.io/badge/License-MIT-black.svg)]()
+🧠 **Dataset:**  
+![UDIVA](https://img.shields.io/badge/Dataset-UDIVA-green)
+
+🌐 **Website:**  
+[![Website](https://img.shields.io/badge/Live_Demo-Streamlit_App-0A66C2?logo=google-chrome&logoColor=white)](https://master-thesis-amr-amer.streamlit.app/)
+
 
 
 
