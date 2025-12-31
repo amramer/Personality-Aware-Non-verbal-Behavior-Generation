@@ -243,8 +243,10 @@ These differences emerge **organically** from personality conditioning applied w
 
 ### 🧠 Behavioral Observations
 
-- **Introverted Listener:** Maintains smaller motion range, limited head/eye movement, and low-intensity gestures.  
-- **Extroverted Listener:** Demonstrates expanded motion range, dynamic gestures, and increased interaction signals (e.g., smiling, leaning forward).  
+- **Introverted Listener:** Maintains smaller motion range, limited head/eye movement, and low-intensity gestures.
+  
+- **Extroverted Listener:** Demonstrates expanded motion range, dynamic gestures, and increased interaction signals (e.g., smiling, leaning forward).
+   
 - **Interpretation:**  
   Personality conditioning drives **consistent behavioral style** across time, showing that the model can modulate non-verbal responses **without altering the conversational context**.
 
