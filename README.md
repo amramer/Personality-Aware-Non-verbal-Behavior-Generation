@@ -85,6 +85,15 @@ Personality Embedding (Extraversion) ───────────┤
                                   
 ```
 
+### Full Model Architecture
+
+<p align="center">
+  <img src="assets/Images/model-architecture.png" width="100%">
+</p>
+
+**Figure:** End-to-end architecture.  
+
+
 ### ⚙️ Core Components
 
 | Module | Role in the Pipeline |
