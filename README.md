@@ -89,13 +89,15 @@ Personality Embedding (Extraversion) ───────────┤
                                   
 ```
 
-### Full Model Architecture
+### 📌 Full Model Architecture
 
-<p align="center">
-  <img src="assets/Images/model-architecture.png" width="100%">
-</p>
+<table align="center" width="100%">
+<tr><td align="center" style="border:2px solid #ccc; border-radius:8px; padding:16px;">
+  <img src="assets/Images/model-architecture.png" width="90%"><br>
+  <sub><b>Figure:</b> End-to-end architecture for personality-conditioned listener motion generation.</sub>
+</td></tr>
+</table>
 
-**Figure:** End-to-end architecture.  
 
 
 ### ⚙️ Core Components
