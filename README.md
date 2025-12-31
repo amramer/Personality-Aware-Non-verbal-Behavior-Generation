@@ -13,7 +13,7 @@
 ![SLURM](https://img.shields.io/badge/SLURM-HPC_Job_Scheduling-2E8B57)
 ![Docker](https://img.shields.io/badge/Docker-Deployment-2496ED)
 
-🎛️ **Multimodal Inputs - Outputs:**  
+🎛️ **Multimodal Inputs -> Outputs:**  
 
 ![Audio](https://img.shields.io/badge/Audio-MFCC-blue)
 ![Pose](https://img.shields.io/badge/Body_Motion-3D_Pose-green)
