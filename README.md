@@ -214,28 +214,54 @@ Study setup:
 
 ---
 
-### **➜ Qualitative Results**
+## 🎨 Qualitative Results
 
-Generated avatars exhibit recognizable behavioral traits:
+Our model generates **distinct listener behaviors** that align with personality traits, without rule-based animation or pre-scripted gestures.
 
-| Personality | Observed Behaviors |
-|-------------|--------------------|
-| **Introverted** | Less eye contact, limited gestures, reduced dynamics |
-| **Extroverted** | More smiling, leaning toward speaker, energetic gestures |
+| Personality | Behavioral Characteristics |
+|-------------|-----------------------------|
+| **Introverted** | Reduced movement, fewer facial dynamics, minimal gesture amplitude |
+| **Extroverted** | Increased motion, expressive facial cues, energetic gestures, forward engagement |
 
-These traits arise **emergently** from personality conditioning, without rule-based animation.
+These differences emerge **organically** from personality conditioning applied within the generative model.
+
+---
+
+### 🎬 Side-by-Side Visual Comparison
+
+<p align="center">
+  <img src="assets/Images/Qualttive-Results.png" width="100%">
+  <br>
+  <sub><i>
+  Top: Generated **introverted** listener sequence (subtle motion, restrained engagement) ·  
+  Middle: Generated **extroverted** listener sequence (expressive behavior, higher engagement) ·  
+  Bottom: **Speaker sequence** observed in the dyadic interaction.
+  </i></sub>
+</p>
 
 ---
 
-### 🔗 Additional Visuals and Evaluations
+### 🧠 Behavioral Observations
 
-Interactive charts, plots, video samples, and comparative demonstrations are available on the website:
-
-➡️ **Full Evaluation & Visualizations**  
-
- [![Website](https://img.shields.io/badge/Website-EVALUATION-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://master-thesis-amr-amer.streamlit.app/)
+- **Introverted Listener:** Maintains smaller motion range, limited head/eye movement, and low-intensity gestures.  
+- **Extroverted Listener:** Demonstrates expanded motion range, dynamic gestures, and increased interaction signals (e.g., smiling, leaning forward).  
+- **Interpretation:**  
+  Personality conditioning drives **consistent behavioral style** across time, showing that the model can modulate non-verbal responses **without altering the conversational context**.
 
 ---
+
+### 🔗 Additional Evaluations & Visualizations
+
+Interactive charts, motion plots, and video demonstrations are available on the project website:
+
+<p align="center">
+<a href="https://master-thesis-amr-amer.streamlit.app/">
+<img src="https://img.shields.io/badge/Website-See_Full_Results-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white">
+</a>
+</p>
+
+---
+
 
 ### 📄 Thesis Document
 
