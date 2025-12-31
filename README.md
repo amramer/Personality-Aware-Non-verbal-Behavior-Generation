@@ -233,9 +233,9 @@ These differences emerge **organically** from personality conditioning applied w
   <img src="assets/Images/Qualttive-Results.png" width="100%">
   <br>
   <sub><i>
-  Top: Generated **introverted** listener sequence (subtle motion, restrained engagement) ·  
-  Middle: Generated **extroverted** listener sequence (expressive behavior, higher engagement) ·  
-  Bottom: **Speaker sequence** observed in the dyadic interaction.
+  Top: Generated **Introverted** listener sequence (subtle motion, restrained engagement) ·  
+  Middle: Generated **Extroverted** listener sequence (expressive behavior, higher engagement) ·  
+  Bottom: **Speaker** observed in the dyadic interaction.
   </i></sub>
 </p>
 
