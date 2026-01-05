@@ -10,7 +10,7 @@
 ![CUDA](https://img.shields.io/badge/CUDA-Enabled-76B900?logo=nvidia) 
 ![Multi-GPU](https://img.shields.io/badge/Distributed_Training-Multi--GPU-0096FF)
 
-🎛️ **Multimodal Inputs >> Outputs:**  
+🎛️ **Multimodal:**  
 
 ![Audio](https://img.shields.io/badge/Audio-MFCC-blue)
 ![Motion Synthesis](https://img.shields.io/badge/Motion_Synthesis-Face%20%2B%20Upper--Body%20(3D%20Pose)-B22222)
