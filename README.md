@@ -3,20 +3,16 @@
 📌 **Core Methods:**  
 
 ![Transformer](https://img.shields.io/badge/Transformers-Multimodal-orange) 
-![VQ-VAE](https://img.shields.io/badge/VQ--VAE-Discrete%20Motion%20Tokens-6A5ACD) 
-![Generative Models](https://img.shields.io/badge/Generative_Motion-Avatar_Synthesis-8A2BE2)
+![VQ-VAE](https://img.shields.io/badge/VQ--VAE-Discrete%20Motion%20Tokens-6A5ACD)
 
 ⚙️ **Infrastructure:**  
 
 ![CUDA](https://img.shields.io/badge/CUDA-Enabled-76B900?logo=nvidia) 
 ![Multi-GPU](https://img.shields.io/badge/Distributed_Training-Multi--GPU-0096FF)
-![SLURM](https://img.shields.io/badge/SLURM-HPC_Job_Scheduling-2E8B57)
-![Docker](https://img.shields.io/badge/Docker-Deployment-2496ED)
 
 🎛️ **Multimodal Inputs >> Outputs:**  
 
 ![Audio](https://img.shields.io/badge/Audio-MFCC-blue)
-![Pose](https://img.shields.io/badge/Body_Motion-3D_Pose-green)
 ![Motion Synthesis](https://img.shields.io/badge/Motion_Synthesis-Face%20%2B%20Upper--Body%20(3D%20Pose)-B22222)
 
 🧠 **Dataset:**  
@@ -26,7 +22,6 @@
 🌐 **Website:**  
 
 [![Website](https://img.shields.io/badge/Live_Demo-Streamlit_App-0A66C2?logo=google-chrome&logoColor=white)](https://master-thesis-amr-amer.streamlit.app/)
-
 
 
 
