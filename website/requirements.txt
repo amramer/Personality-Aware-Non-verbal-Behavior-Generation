@@ -1,6 +1,5 @@
+streamlit
 requests
 pillow
 pandas
 plotly
-
-
