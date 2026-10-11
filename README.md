@@ -21,7 +21,7 @@
 
 🌐 **Website:**  
 
-[![Website](https://img.shields.io/badge/Live_Demo-Streamlit_App-0A66C2?logo=google-chrome&logoColor=white)](https://master-thesis-amr-amer.streamlit.app/)
+[![Website](https://img.shields.io/badge/Project_Website-GitHub_Pages-0A66C2?logo=google-chrome&logoColor=white)](https://amramer.github.io/Personality-Aware-Non-verbal-Behavior-Generation/)
 
 
 
@@ -30,7 +30,7 @@
 
 [Email](mailto:amribrahim.amer@gmail.com) • 
 [LinkedIn](https://www.linkedin.com/in/amr-amer-2023-cs/) • 
-[Thesis Website](https://master-thesis-amr-amer.streamlit.app/)
+[Thesis Website](https://amramer.github.io/Personality-Aware-Non-verbal-Behavior-Generation/)
 
 
 
@@ -78,7 +78,7 @@ The generated avatar behavior is **conditioned on personality traits** (specific
 
 ***See the demo video and project details on Website***
 
- [![Website](https://img.shields.io/badge/Website-Live_Demo-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://master-thesis-amr-amer.streamlit.app/)
+ [![Website](https://img.shields.io/badge/Website-Live_Demo-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://amramer.github.io/Personality-Aware-Non-verbal-Behavior-Generation/)
 
 
 ---
@@ -153,7 +153,7 @@ Autoregressive decoding, input masking, and teacher forcing for stable long-hori
 ### 📌 Full Architecture, Diagrams & Interactive Breakdown
 Full model diagrams, training flow, and visual architecture available here:
 
-[![Website](https://img.shields.io/badge/website-Full_Method_&_Architecture-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://master-thesis-amr-amer.streamlit.app/#method)
+[![Website](https://img.shields.io/badge/website-Full_Method_&_Architecture-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://amramer.github.io/Personality-Aware-Non-verbal-Behavior-Generation/#method)
 
 ---
 
@@ -252,7 +252,7 @@ These differences emerge **organically** from personality conditioning applied w
 Interactive charts, motion plots, and video demonstrations are available on the project website:
 
 <p align="center">
-<a href="https://master-thesis-amr-amer.streamlit.app/">
+<a href="https://amramer.github.io/Personality-Aware-Non-verbal-Behavior-Generation/">
 <img src="https://img.shields.io/badge/Website-See_Full_Results-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white">
 </a>
 </p>
