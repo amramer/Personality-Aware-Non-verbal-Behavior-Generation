@@ -1,297 +1,162 @@
 # Personality-Aware Non-verbal Behavior Generation in Dyadic Interactions
 
-📌 **Core Methods:**  
+A transformer-based model that generates a listener avatar's facial expressions, hand gestures and upper-body motion in response to a speaker, conditioned on the listener's personality (extraversion).
 
-![Transformer](https://img.shields.io/badge/Transformers-Multimodal-orange) 
-![VQ-VAE](https://img.shields.io/badge/VQ--VAE-Discrete%20Motion%20Tokens-6A5ACD)
+**Amr Amer** · Master's thesis in Visual Computing, Saarland University (2024) · Research at DFKI and the Max Planck Institute for Informatics
 
-⚙️ **Infrastructure:**  
-
-![CUDA](https://img.shields.io/badge/CUDA-Enabled-76B900?logo=nvidia) 
-![Multi-GPU](https://img.shields.io/badge/Distributed_Training-Multi--GPU-0096FF)
-
-🎛️ **Multimodal:**  
-
-![Audio](https://img.shields.io/badge/Audio-MFCC-blue)
-![Motion Synthesis](https://img.shields.io/badge/Motion_Synthesis-Face%20%2B%20Upper--Body%20(3D%20Pose)-B22222)
-
-🧠 **Dataset:**  
-
-![UDIVA](https://img.shields.io/badge/Dataset-UDIVA-green)
-
-🌐 **Website:**  
-
-[![Website](https://img.shields.io/badge/Project_Website-GitHub_Pages-0A66C2?logo=google-chrome&logoColor=white)](https://amramer.github.io/Personality-Aware-Non-verbal-Behavior-Generation/)
-
-
-
-**Master Thesis Project**  
-**Author:**   *Amr Amer*
-
-[Email](mailto:amribrahim.amer@gmail.com) • 
-[LinkedIn](https://www.linkedin.com/in/amr-amer-2023-cs/) • 
-[Thesis Website](https://amramer.github.io/Personality-Aware-Non-verbal-Behavior-Generation/)
-
-
-
----
-
-
-## Table of Contents
-- [Overview](#-overview)
-- [Demo](#-demo)
-- [Method](#-method)
-- [Evaluation](#-evaluation)
-- [Thesis Document](#-thesis-document)
-- [Installation](#-installation)
-- [Citation](#-citation)
-
----
-
-## 📌 Overview
-This work proposes a **transformer-based architecture** for generating non-verbal listener behavior in dyadic interactions.  
-The generated avatar behavior is **conditioned on personality traits** (specifically Extraversion) and incorporates:
-
-- Facial expressions (jaw, micro-expressions)
-- Upper body posture and dynamics
-- Hand gestures
-- Audio & multimodal cues from the speaker
-
- The system achieves **state-of-the-art performance** for multimodal behavior generation on the **UDIVA** dataset.
-
- **Target Use Cases:**
-
-- Social VR and digital avatars
-- Conversational AI / customer service bots
-- Virtual therapy and coaching systems
-- Human-robot interaction (HRI)
-
----
-
-## 🚀 Demo
+[**Project website**](https://amramer.github.io/Personality-Aware-Non-verbal-Behavior-Generation/) | [**Thesis (PDF)**](docs/Thesis_final_doc.pdf) | [LinkedIn](https://www.linkedin.com/in/amr-amer-2023-cs/) | [Email](mailto:amribrahim.amer@gmail.com)
 
 <p align="center">
-  <img src="assets/Images/final-avatars.gif" width="100%">
+  <img src="assets/images/demo-avatars.gif" width="100%" alt="Generated listener avatars with extrovert, neutral and introvert personalities">
   <br>
-  <sub><i>Demo: Predicted listener avatar behaviors conditioned on personality (Extrovert, Neutral, Introvert).</i></sub>
+  <sub>Generated listener avatars for the same speaker, conditioned on extrovert, neutral and introvert personality scores.</sub>
 </p>
 
-***See the demo video and project details on Website***
+## Highlights
 
- [![Website](https://img.shields.io/badge/Website-Live_Demo-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://amramer.github.io/Personality-Aware-Non-verbal-Behavior-Generation/)
+- Generates **face, hands and upper body** together, using SMPL-X parameters extracted with PIXIE.
+- **Personality conditioning**: a small network embeds the listener's extraversion score, so the same speaker input produces different listener behavior.
+- **Two-stage training**: a VQ-VAE learns a discrete codebook of listener motion, then an autoregressive transformer predicts future motion tokens from speaker audio, speaker motion and the listener's past motion.
+- Trained and evaluated on the **UDIVA** dyadic interaction dataset. Outperforms a personality-agnostic baseline on L2, FID and P-FID for both face and body.
+- In a user study, participants correctly identified the extroverted avatar in **86%** of cases.
 
+The [project website](https://amramer.github.io/Personality-Aware-Non-verbal-Behavior-Generation/) has the demo videos, the full method description and annotated code for every pipeline step.
 
----
+## Results
 
-## ⚙️ Method
+Evaluated on the UDIVA test set. Lower is better for L2, FID and P-FID. Higher is better for variance (Var), which measures how much the generated motion varies.
 
-This system generates **personality-aware non-verbal behavior** for a listener avatar in dyadic interactions. The model predicts future facial and upper-body motion by conditioning on **speaker cues, listener motion history, and a personality trait (extraversion)**.
+| Model | Face L2 ↓ | Face FID ↓ | Face P-FID ↓ | Face Var ↑ | Body L2 ↓ | Body FID ↓ | Body P-FID ↓ | Body Var ↑ |
+|---|---|---|---|---|---|---|---|---|
+| Personality-agnostic baseline | 32.45 | 7.67 | 10.47 | 1.39 | 75.29 | 58.87 | 96.82 | 0.97 |
+| Ours, joint body/face representation | 33.05 | 8.65 | 11.94 | 1.49 | 74.41 | 51.90 | 91.49 | 0.84 |
+| Ours, random extraversion scores | 32.76 | 7.58 | 10.83 | **1.61** | 73.23 | 47.56 | 91.33 | **1.13** |
+| **Ours** | **32.12** | **6.15** | **10.31** | 1.54 | **72.26** | **43.16** | **87.73** | 1.03 |
 
-### Pipeline Overview
+**User study (20 participants)**
+
+| Task | Result |
+|---|---|
+| Tell the extroverted avatar from the introverted one | 86% correct |
+| Prefer the personality-aware model over the baseline | 71% preferred ours |
+
+<p align="center">
+  <img src="assets/images/qualitative-results.png" width="100%" alt="Frame sequences of an introverted listener, an extroverted listener and the speaker">
+  <br>
+  <sub>Top: introverted listener. Middle: extroverted listener. Bottom: speaker. The extroverted avatar smiles more, leans in and gestures more.</sub>
+</p>
+
+## Method
+
+<p align="center">
+  <img src="assets/images/model-architecture.png" width="100%" alt="Model architecture">
+</p>
+
+| Component | What it does |
+|---|---|
+| Cross-modal transformer | Fuses the speaker's audio (mel-spectrogram) and motion into one representation using cross-attention. |
+| Personality network | An MLP that embeds the listener's extraversion score into a conditioning vector. |
+| VQ-VAE | Encodes listener motion into discrete tokens from a learned codebook and decodes tokens back into motion. |
+| Predictor transformer | Autoregressively predicts the listener's future motion tokens from the speaker features, the personality embedding and the listener's past motion tokens. |
+
+**Training** runs in two stages:
+
+1. **VQ-VAE.** Learn the listener motion codebook (sequence length 32, AdamW with warm-up, about 3 days on 8 A100 GPUs).
+2. **Predictor.** Train the cross-modal transformer, personality network and predictor transformer on top of the frozen codebook (learning rate 0.001, batch size 32, about 1.5 days on 8 GPUs). Training uses teacher forcing and random masking.
+
+## Repository structure
+
 ```
-Speaker Audio (MFCC) + Speaker Motion (Pose)
-                    ↓
-          [ Multimodal Transformer ] ───────────┐
-                                                │
-                                                |
-                                                |→ [ Predictor Autoregressive Transformer ]  → [ Decoder ]  → Future Listener Motion(Personality-Conditioned)
-Listener Past Motion (Quantized)                │                     ↓
-             +                                  │                [ VQ-VAE Codebook ]
-Personality Embedding (Extraversion) ───────────┤
-                                                                       
-                                                              
-                                                                                             
-                                  
+├── assets/images/            Figures used in this README
+├── docs/                     Thesis PDF, experiment report and topic introduction
+├── site/                     Project website (deployed to GitHub Pages)
+└── src/
+    ├── vqgan/                Stage 1: VQ-VAE (train_vq_transformer.py, configs/, vqmodules/)
+    ├── modules/              Stage 2 models
+    │   ├── fact_model.py         Final personality-aware model
+    │   ├── fact_model_larg_feat.py   Ablation: larger feature size
+    │   ├── fact_model_pers_2.py      Ablation: separate face and body input streams
+    │   └── base_models.py        Shared transformer building blocks
+    ├── configs/              Stage 2 configs (conditioned and unconditioned)
+    ├── utils/                Data loading, losses, optimizer schedule
+    ├── train_vq_decoder.py   Stage 2 training
+    ├── test_vq_decoder.py    Generate listener motion on the test set
+    ├── evaluator.py          L2, FID, P-FID and variance metrics
+    ├── visualize_codebook.py Codebook analysis
+    └── render/               Render predictions as avatars and videos with PIXIE
 ```
 
-### 📌 Full Model Architecture
+## Getting started
 
-<table align="center" width="100%">
-<tr><td align="center" style="border:2px solid #ccc; border-radius:10px; padding:10px;">
-  <img src="assets/Images/model-architecture.png" width="100%"><br>
-  <sub><b>Figure:</b> End-to-end architecture for personality-conditioned listener motion generation.</sub>
-</td></tr>
-</table>
-
-
-
-### ⚙️ Core Components
-
-| Module | Role in the Pipeline |
-|--------|-----------------------|
-| **Multimodal Transformer** | Fuses **speaker-side inputs** (MFCC audio + pose motion) into a unified representation used for conditioning. |
-| **Personality Encoder** | Encodes the listener's extraversion trait into a conditioning vector. |
-| **Quantized Motion Embedding (VQ-VAE)** | Represents listener past motion as **discrete latent tokens** leveraging the motion codebook. |
-| **Predictor Autoregressive Transformer** | Predicts **future listener motion token indices** based on: fused speaker features, personality embedding, and past listener motion. |
-| **VQ-VAE Codebook Lookup** | Matches predicted listener token indices to the closest codebook entries for stable motion reconstruction. |
-| **Decoder** | Converts codebook vectors into continuous listener motion (facial + upper-body), reflecting personality traits. |
-
-
-### 🏋️ Training Summary
-
-- **Stage 1 — VQ-VAE Pretraining:**  
-  Build a discrete motion representation; learn listener motion codebook for upper-body + facial motion.
-
-- **Stage 2 — Predictive Modeling:**  
-  Train the predictor transformer to generate future listener motion sequences using:
-  - Multimodal speaker features (from the Multimodal Transformer)
-  - Personality embeddings (extraversion)
-  - Quantized listener motion histories
-
-**Methods Applied:**  
-Autoregressive decoding, input masking, and teacher forcing for stable long-horizon motion predictions.
-
-
-### 🎯 Why It Works
-
-- **Personality conditioning** drives distinct expressive patterns (introverted vs extroverted behavior).
-- **Discrete latent tokens (VQ-VAE)** reduce generative noise and maintain motion structure.
-- **Speaker-conditioned predictions** align listener behavior with conversational cues.
-- **Autoregressive inference** ensures natural temporal continuity in generated sequences.
----
-
-### 📌 Full Architecture, Diagrams & Interactive Breakdown
-Full model diagrams, training flow, and visual architecture available here:
-
-[![Website](https://img.shields.io/badge/website-Full_Method_&_Architecture-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://amramer.github.io/Personality-Aware-Non-verbal-Behavior-Generation/#method)
-
----
-
-
----
-
-## 📈 Evaluation
-
-This model was evaluated on the **UDIVA dyadic dataset**, using metrics for motion realism, personality perception, and behavioral engagement.
-
-- Dataset description: https://chalearnlap.cvc.uab.es/dataset/41/description/
-
----
-
-### **➜ Quantitative Performance**
-
-We evaluate the model using four core metrics:
-
-| Metric | Purpose | Good Indicator |
-|--------|----------|----------------|
-| **L2 Distance ↓** | Fit to ground truth motion | Lower is better |
-| **FID ↓** | Realism of generated sequences | Lower is better |
-| **P-FID ↓** | Plausibility of joint speaker-listener behavior | Lower is better |
-| **Variance ↑** | Behavioral diversity | Higher is better |
-
-| Model                                  | Face L2 ↓ | Face FID ↓ | Face P-FID ↓ | Face Var ↑ | Body L2 ↓ | Body FID ↓ | Body P-FID ↓ | Body Var ↑ |
-|----------------------------------------|------------|-------------|---------------|-------------|-------------|--------------|----------------|--------------|
-| Personality-agnostic Baseline          | 32.45      | 7.67        | 10.47         | 1.39        | 75.29       | 58.87        | 96.82          | 0.97         |
-| Ours – Joint Body/Face Representation  | 33.05      | 8.65        | 11.94         | 1.49        | 74.41       | 51.90        | 91.49          | 0.84         |
-| Ours – Random Extraversion Scores      | 32.76      | 7.58        | 10.83         | **1.61**    | 73.23       | 47.56        | 91.33          | **1.13**     |
-| **Ours (Final Model)**                 | **32.12**  | **6.15**    | **10.31**     | 1.54        | **72.26**   | **43.16**    | **87.73**      | 1.03         |
-
-**Conclusion:**  
-
-The final model demonstrates improved distribution alignment (FID, P-FID) and behavioral variability, generating more realistic and expressive listener avatars.
-
----
-
-### **➜ User Study**
-
-Two user perception studies (n = 20 participants) were conducted to validate:
-
-| Objective | Outcome |
-|-----------|----------|
-| Distinguish introvert vs. extrovert avatars | **86%** participant accuracy |
-| Preference vs. personality-agnostic model | **71%** preferred our model |
-
-Study setup:
-
-- 6 randomly sampled listeners per experiment
-- Highest/lowest extraversion values used for conditioning
-- Video order and left-right placement randomized to avoid bias
-
----
-
-## 🎨 Qualitative Results
-
-Our model generates **distinct listener behaviors** that align with personality traits, without rule-based animation or pre-scripted gestures.
-
-| Personality | Behavioral Characteristics |
-|-------------|-----------------------------|
-| **Introverted** | Reduced movement, fewer facial dynamics, minimal gesture amplitude |
-| **Extroverted** | Increased motion, expressive facial cues, energetic gestures, forward engagement |
-
-These differences emerge **organically** from personality conditioning applied within the generative model.
-
----
-
-### 🎬 Side-by-Side Visual Comparison
-
-<p align="center">
-  <img src="assets/Images/Qualttive-Results.png" width="100%">
-  <br>
-  <sub><i>
-  Top: Generated **Introverted** listener sequence (subtle motion, restrained engagement) ·  
-  Middle: Generated **Extroverted** listener sequence (expressive behavior, higher engagement) ·  
-  Bottom: **Speaker** observed in the dyadic interaction.
-  </i></sub>
-</p>
-
----
-
-### 🧠 Behavioral Observations
-
-- **Introverted Listener:** Maintains smaller motion range, limited head/eye movement, and low-intensity gestures.
-  
-- **Extroverted Listener:** Demonstrates expanded motion range, dynamic gestures, and increased interaction signals (e.g., smiling, leaning forward).
-   
-- **Interpretation:**  
-  Personality conditioning drives **consistent behavioral style** across time, showing that the model can modulate non-verbal responses **without altering the conversational context**.
-
----
-
-### 🔗 Additional Evaluations & Visualizations
-
-Interactive charts, motion plots, and video demonstrations are available on the project website:
-
-<p align="center">
-<a href="https://amramer.github.io/Personality-Aware-Non-verbal-Behavior-Generation/">
-<img src="https://img.shields.io/badge/Website-See_Full_Results-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white">
-</a>
-</p>
-
----
-
-
-### 📄 Thesis Document
-
-For full technical and academic context, the complete Master's Thesis is available:
-
-[**View / Download Thesis (PDF)**](docs/Thesis_final_doc.pdf)
-
-It contains the architecture breakdown, mathematical formulation, experiment setup,
-and full literature review supporting this repository.
-
----
-
-### 🛠️ Installation
+The code was developed with Python 3.7 to 3.8, PyTorch and CUDA on a Slurm GPU cluster. Pretrained models are not provided, so you need to train both stages yourself.
 
 ```bash
-git clone https://github.com/yourusername/your-thesis-repo.git
-cd your-thesis-repo
+git clone https://github.com/amramer/Personality-Aware-Non-verbal-Behavior-Generation.git
+cd Personality-Aware-Non-verbal-Behavior-Generation
 pip install -r requirements.txt
-streamlit run src/streamlit_app.py
 ```
 
----
+### Data
 
-### 📜 Citation
+You need access to the [UDIVA dataset](https://chalearnlap.cvc.uab.es/dataset/41/description/). The preprocessing steps (segmenting speaker and listener, cropping, PIXIE motion features, mel-spectrogram audio features, smoothing) are documented with code on the [project website](https://amramer.github.io/Personality-Aware-Non-verbal-Behavior-Generation/#implementation). The training scripts expect this layout:
 
-If you use this work in your research or publications, please cite:
+```
+<basedir>/
+├── train/
+│   ├── metadata/parts_train.csv                  Personality scores (EXTRAVERSION_Z)
+│   └── smoothed_final_features_id/<session>/     p0/p1 motion and audio .npy files
+└── val/
+    ├── metadata/parts_val_unmasked.csv
+    └── smoothed_final_features_id/<session>/
+```
+
+Set `data.basedir` in the config files to your `<basedir>`.
+
+### Train and evaluate
+
+```bash
+# Stage 1: VQ-VAE (run from src/vqgan)
+cd src/vqgan
+python train_vq_transformer.py --config configs/l2_32_smoothSS.json
+
+# Stage 2: predictor (run from src). First set "l_vqconfig" in the config
+# to the experiment folder created in stage 1.
+cd ..
+python train_vq_decoder.py --config configs/conditioned/new_model.json
+
+# Generate listener motion. You are prompted to pick introvert, extrovert,
+# neutral, actual or random extraversion scores.
+python test_vq_decoder.py --config configs/conditioned/new_model.json \
+    --checkpoint <path/to/model.pth> --speaker all --save
+
+# Metrics
+python evaluator.py --config configs/conditioned/new_model.json --speaker all \
+    --pred <path/to/predictions.npy>
+```
+
+Use the configs in `src/configs/unconditioned/` to train the personality-agnostic baseline.
+
+### Rendering
+
+`src/render/demos/` turns predicted SMPL-X parameters into avatar frames and videos with PIXIE. It needs the PIXIE model files (`pixie_model.tar`, `SMPLX_NEUTRAL_2020.npz`) from the [PIXIE project](https://github.com/yfeng95/PIXIE) in `src/render/data/`.
+
+## License
+
+The code written for this thesis is released under the [MIT License](LICENSE). Third-party code in this repository keeps its own license:
+
+- `src/render/pixielib/` is from [PIXIE](https://github.com/yfeng95/PIXIE) (Max Planck Institute for Intelligent Systems) and is for non-commercial research use only. See the PIXIE license.
+- The Fréchet distance computation in `src/evaluator.py` is adapted from code by the Institute of Bioinformatics, JKU Linz, under the Apache License 2.0.
+
+The UDIVA dataset is subject to its own license terms and is not included.
+
+## Citation
 
 ```bibtex
 @mastersthesis{amer2024personalityaware,
-  title        = {Personality-Aware Non-verbal Behavior Generation in Dyadic Interactions},
-  author       = {Amer, Amr},
-  year         = {2024},
-  institution  = {Saarland University},
-  type         = {Master's Thesis}
+  title  = {Personality-Aware Non-verbal Behavior Generation in Dyadic Interactions},
+  author = {Amer, Amr},
+  school = {Saarland University},
+  year   = {2024},
+  type   = {Master's Thesis}
 }
-
+```

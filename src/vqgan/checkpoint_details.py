@@ -1,26 +1,26 @@
+"""Print basic details of a saved VQ-VAE checkpoint.
+
+Usage:
+    python checkpoint_details.py path/to/model_best.pth
+"""
+import argparse
+
 import torch
 
+
 def load_checkpoint(checkpoint_path):
-    """
-    Load the checkpoint from the given path.
+    """Load the checkpoint from the given path onto the CPU."""
+    return torch.load(checkpoint_path, map_location="cpu")
 
-    Parameters:
-    checkpoint_path (str): Path to the checkpoint file.
-
-    Returns:
-    dict: Loaded checkpoint.
-    """
-    checkpoint = torch.load(checkpoint_path)
-    return checkpoint
 
 def main():
-    checkpoint_path = '/home/amr/Clusters@DFKI/Thesis/pipeline/vqgan/experiments/experiment_2023-08-30_17-19-35/models/l2_32_smoothSS_er2er_best.pth'
-    checkpoint = load_checkpoint(checkpoint_path)
-    
-    # Print the details
-    print("Last epoch: ", checkpoint['epoch'])
-    # print("Last optimizer state: ", checkpoint['optimizer'])
-    # print("Model state dict: ", checkpoint['state_dict'])
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument("checkpoint_path", help="Path to a .pth checkpoint file")
+    args = parser.parse_args()
+
+    checkpoint = load_checkpoint(args.checkpoint_path)
+    print("Last epoch:", checkpoint["epoch"])
+
 
 if __name__ == "__main__":
     main()

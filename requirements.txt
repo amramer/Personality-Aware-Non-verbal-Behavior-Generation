@@ -1,5 +1,26 @@
-streamlit
-requests
-pillow
+# Training and evaluation
+torch
+torchvision
+tensorboard
+numpy
+scipy
+scikit-learn
+einops
 pandas
-plotly
+tqdm
+six
+
+# Plots
+matplotlib
+seaborn
+
+# Rendering avatars with PIXIE (src/render)
+opencv-contrib-python
+scikit-image
+imageio
+kornia
+yacs
+pyyaml
+pillow
+moviepy
+ffmpeg-python

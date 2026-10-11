@@ -276,7 +276,7 @@ def main(args):
     test_Y = test_Y[1:, : , :]
     test_X = test_X[:, : , :]
     
-    pred = np.load('outputs/all_udiva/conditioned/conditioned_model_actual_pred_all_speaker.npy')
+    pred = np.load(args.pred)
     ref = test_Y[:pred.shape[0], :, :]
     speak = test_X[:pred.shape[0], :, :]
 
@@ -307,6 +307,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', type=str, required = True)
     parser.add_argument('--speaker', type=str, required = True)
+    parser.add_argument('--pred', type=str,
+                        default='outputs/all_udiva/conditioned/conditioned_model_actual_pred_all_speaker.npy',
+                        help='Path to the predicted listener motion (.npy) saved by test_vq_decoder.py')
     args = parser.parse_args()
     print(args)
     main(args)
