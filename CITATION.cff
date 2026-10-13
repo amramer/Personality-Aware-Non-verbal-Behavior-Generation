@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this code or the thesis in your work, please cite it as below."
+title: "Personality-Aware Non-verbal Behavior Generation in Dyadic Interactions"
+authors:
+  - family-names: Amer
+    given-names: Amr
+repository-code: "https://github.com/amramer/Personality-Aware-Non-verbal-Behavior-Generation"
+url: "https://amramer.github.io/Personality-Aware-Non-verbal-Behavior-Generation/"
+license: MIT
+keywords:
+  - non-verbal behavior generation
+  - dyadic interaction
+  - personality
+  - virtual avatars
+  - VQ-VAE
+  - transformers
+  - SMPL-X
+  - UDIVA
+preferred-citation:
+  type: thesis
+  thesis-type: "Master's Thesis"
+  title: "Personality-Aware Non-verbal Behavior Generation in Dyadic Interactions"
+  authors:
+    - family-names: Amer
+      given-names: Amr
+  institution:
+    name: "Saarland University"
+  year: 2024
